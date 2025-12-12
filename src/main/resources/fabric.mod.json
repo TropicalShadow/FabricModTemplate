@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "fabric-mod-template",
+  "version": "%version%",
+
+  "name": "FabricModTemplate",
+  "description": "ModDescription",
+  "authors": [
+    "TropicalShadow"
+  ],
+  "contact": {
+    "homepage": "https://github.com/TropicalShadow/FabricModTemplate/issues",
+    "sources": "https://github.com/TropicalShadow/FabricModTemplate"
+  },
+
+  "license": "MIT",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      {
+        "value": "club.tesseract.fabric.FabricModTemplate"
+      }
+    ]
+  },
+  "mixins": [
+    "fabric_mod.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.0",
+    "minecraft": "1.21.10",
+    "java": ">=17"
+  },
+  "suggests": {}
+}
