@@ -1,12 +1,13 @@
 plugins {
     java
     alias(libs.plugins.fabric.loom)
+    alias(libs.plugins.shadow)
 }
 base {
     archivesName.set("fabric-mod-template")
 }
 
-version = "dev" // TODO - github ify this
+version = System.getenv("TAG_VERSION") ?: "dev"
 group = project.property("maven_group") as String
 
 repositories {
@@ -17,7 +18,7 @@ loom {
 }
 
 dependencies {
-    minecraft(libs.minecraft.get())//"com.mojang:minecraft:1.21.10")
+    minecraft(libs.minecraft.get())
     mappings(loom.officialMojangMappings())
     modImplementation(libs.fabric.loader)
 }
